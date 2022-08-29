@@ -1,0 +1,152 @@
+/*
+Feel free to remove these styles or 
+customise in your own stylesheet 👍
+*/
+
+:root{
+    --background: #fff;
+    --cream: hsl(30, 38%, 92%);
+    --dark-cyan: hsl(158, 36%, 37%);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    background-color: var(--cream);
+}
+
+main{
+    width: 90%;
+    height: 95%;
+    border-radius: 12px;
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+.content-img{
+    height: 40%;
+    overflow: hidden;
+}
+
+.content-img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.content-img #img-desktop{
+    display: none;
+}
+
+
+.content-description{
+    padding: 1% 6%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.content-description, del, button{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content-description #sub-title{
+    font-weight: 500;
+}
+
+.content-description .title,.precio{
+    font-size: 2.5em;
+    margin: 5% auto;
+    font-family: 'Fraunces', serif;
+}
+
+.content-description .precio{
+    color:var(--dark-cyan);
+    display: flex;
+    align-items: center;
+}
+
+.content-description .precio del{
+    margin-left: 5%;
+    font-size: .5em;
+    color: #ccc;
+}
+
+button{
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    height: 40px;
+    opacity: 0.7;
+    font-weight: 700;
+    color: var(--background);
+    background-color: var(--dark-cyan);
+}
+
+button:active{
+    transform: scale(1.05);
+    opacity: 1;
+}
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+a img{
+    margin-top: 5%;
+    width:50px;
+}
+
+@media screen and (min-width: 600px){
+    main{
+        margin-top: 5%;
+        width: 50%;
+        height: 80%;
+        display: flex;
+    }
+
+    .content-img{
+        width: 50%;
+        height: 100%;
+    }
+
+    #img-movil{
+        display: none;
+    }
+
+    .content-img #img-desktop{
+        display: block;
+    }
+
+    .content-description{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .content-description .title{
+        font-size: 3.5em;
+    }
+
+    .content-description .text{
+        font-size: 1.1em;
+        line-height: 1.5em;
+    }
+
+    .content-description .precio{
+        margin-left: 0;
+    }
+
+}

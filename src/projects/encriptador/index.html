@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer="defer"></script>
+</head>
+<body class="body">
+    <header>
+        <img src="icons/Logo@2x.png" alt="Alura latam">
+        <a href="https://github.com/miller-vrg/Challenge-Oracle-ONE/tree/main/spring-1-encriptador">
+            <img src="icons/github-blue.png" alt="">
+        </a>
+    </header>
+    <main>
+        <section class="contenido">
+            <textarea cols="20" rows="10" id="entrada-user" role="textbox" contenteditable>Ingrese el texto aquí</textarea>
+            <p><img src="icons/Group.png" alt="!"> Solo letras en minusculas y sin acentos</p>
+            <div class="bottones">
+                    <button class="btn-encriptador" id="encriptar">Encriptar</button>
+                    <button class="btn-desencriptador" id="desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <div class="contenet-result" id="resultado" role="textbox" contenteditable>
+            <div id="boton-textarea">
+                <textarea name="resultado" id="text-resultado" cols="20" rows="10">...</textarea>
+                <button id="copiar">Copiar</button>
+            </div>
+            <div id="info">
+                <img src="img/Muñeco.png" alt="Busqueda">
+                <p id="title">Ningún mensaje fue encontrado</p>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>  
+        </div>
+    </main>
+</body>
+</html>
