@@ -5,7 +5,7 @@
     ---color-font-secun: #00000A;
     --color-shadow: rgba(255, 255, 17, 0.7);
     --color-shadow-white: rgba(255, 255, 255, 0.7);
-    --color-focus: rgb(255, 255, 17);
+    --color-focus: #ffff11;
     --font-size-max: 32px;
     --font-size-min: 22px;
 }
@@ -16,6 +16,9 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Zilla Slab', serif;
 }
 
 html{
@@ -82,7 +85,7 @@ main{
 }
 
 .content-perfil{
-    margin: 10% auto;
+    margin: 10% auto 2%;
     width: 50%;
     height: 40%;
     height: 90%;
@@ -96,7 +99,7 @@ main{
     height:420px;
     border: 5px solid var(--color-font);
     border-radius:50%;
-    box-shadow: 0 -5px 50px 5px var(--color-shadow), 
+    box-shadow: 0 -10px 40px 5px var(--color-shadow), 
     inset 0 -5px 50px 5px var(--color-shadow);
 }
 
@@ -109,40 +112,39 @@ main{
     overflow: hidden;
 }
 
-.content-perfil h1{
+.home .description-perfil{
+    margin: 5% auto 10%;
+    padding: 0 5% 0 5%;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.home .description-perfil h1{
     color:var(--color-font-title);
     font-size: 2.5rem;
     text-decoration: underline;
     margin-bottom:2%;
 }
 
-.content-perfil h1, .content-perfil h6{
+.home .description-perfil h1, .home .description-perfil h6{
     text-align: center;
 }
 
-.img-circle h5{
-    margin-bottom: 5%;
+
+.home .description-perfil .redes{
+    margin: 2% 0 10% 40%;
+    width: 20%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
 }
 
-.decription-contenet a{
+.home .description-perfil a img{
+    object-fit: cover;
+    height: 70%;
 }
 
-.content-perfil .decription-contenet > a img{
-    margin: 0 10px 0 100px;
-}
-
-.content-perfil .decription-contenet a img{
-    margin-top: 5% ;
-    width: 50px;
-}
-
-
-.home .description-perfil{
-    margin: 5% auto;
-    padding: 0 5% 0 5%;
-    box-sizing: border-box;
-    text-align: justify;
-}
 
 .tecnologias,.proyectos{
     width: 90%;
@@ -150,7 +152,7 @@ main{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    margin: 10% auto;
+    margin: 10% auto 5%;
 }
 
 .tecnologias .content-tecnologia{
@@ -169,6 +171,9 @@ main{
 .content-tecnologia img{
     object-fit: cover;
     width:70%;
+}
+.content-tecnologia h2{
+    font-size: 2rem;
 }
 
 .proyectos .content-project,.tecnologias .content-tecnologia{
@@ -202,15 +207,17 @@ main{
 }
 
 .proyectos  .content-project div{
+    padding: 0 2%;
     height: 20%;
     display: flex;
     justify-content: space-between;
     background-color: var(--color-background);
+    box-sizing: border-box;
 }
 
 .proyectos .content-project div img{
-    width: 52px;
-    height: 50%;
+    width: 50px;
+    height: 50px;
 }
 
 .contacto{
@@ -218,11 +225,12 @@ main{
     height: 60vh;
     display: grid;
     place-items: center;
-    margin: 10% auto;
+    margin: 0% auto;
+    overflow: hidden;
 }
 
 .contacto form{
-    padding: 10%;
+    padding: 5%;
     width: 80%;
     height: 80%;
     border-radius: 20px;
@@ -238,6 +246,11 @@ main{
     width:100%;
     height: 70px;
     font-size: 1.5rem;
+}
+
+.contacto form input, .contacto form #mensaje{
+    border: none;
+    border-bottom: 2px solid var(--color-background);
 }
 
 .contacto form #mensaje{
@@ -260,3 +273,131 @@ main{
     box-shadow: 0 0 30px 5px var(--color-shadow);
     opacity: 1;
 }
+
+@media only screen and (min-device-width:600px) and (max-device-width:999px){
+
+    nav .items{
+        font-size: 1.5rem;
+    }
+    .home .description-perfil .redes{
+        width: 25%;
+    }
+    .tecnologias, .proyectos{
+        padding: 5% auto;
+        margin: 0 auto 5%;
+        font-size: 1.5rem;
+        height: 150vh;
+        box-sizing: border-box;
+    }
+
+    .proyectos .content-project{
+        width: 80%;
+        height: 20%;
+    }
+
+    .contacto form label, .contacto form input, .contacto form #mensaje{
+        font-size: 1.5rem;
+    }
+
+    .contacto form #button{
+        height: 40px;
+    }
+
+}
+
+@media only screen and (min-device-width:1000px){
+
+    header{
+        height: 30px;
+    }
+
+    nav{
+        padding: 0;
+    }
+
+    nav .items{
+        font-size: 1rem;
+    }
+
+    .home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        height: 100vh;
+        overflow: visible;
+    }
+
+    .home .content-perfil{
+        width: 50%;
+        margin-top:0%;
+        max-height: 80%;
+    }
+
+    .home .description-perfil{
+        width: 50%;
+        height: 100%;
+        padding: 0 5%;
+        margin: 0;
+    }
+
+    .home .description-perfil h1{
+        margin:10% auto 0;
+    }
+
+    .home .description-perfil .redes{
+        width: 35%;
+    }
+
+    .tecnologias, .proyectos{
+        height: 50vh;
+        gap: 20px;
+        margin: 2% auto 20%;
+    }
+
+    .tecnologias .content-tecnologia{
+        width: 20%;
+        max-height: 300px;
+    }
+
+.content-tecnologia h2{
+    font-size: 1rem;
+}
+
+    .tecnologias .content-tecnologia, .proyectos .content-project{
+        font-size: 1rem;
+        height: 90%;
+    }
+
+    .proyectos .content-project{
+        width: 40%;
+        max-width: 400px;
+        max-height: 300px;
+    }
+
+    .proyectos .content-project div img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .contacto{
+        height: 100vh;
+    }
+
+    .contacto form{
+        font-size: 1.2rem;
+        width: 50%;
+    }
+
+    .contacto form input, .contacto form #mensaje{
+        font-size: 1rem;
+        margin-bottom: 2%;
+    }
+
+    .contacto form #button{
+        height: 80px;
+    }
+
+}
+
+
