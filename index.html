@@ -3,7 +3,7 @@
 
 <head>
     <meta lang="es">
-    <meta charset="UTF-8">
+    <meta chartipo="UTF-8">
     <link rel="stylesheet" href="src/css/style-index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,10 +82,10 @@
                     <h2>Oracle cloud, data base</h2>
                 </div>
             -->
-            <div class="content-tecnologia">
+            <!-- <div class="content-tecnologia">
                 <img src="src/icons/python.png" alt="PYTHON">
                 <h2>Python</h2>
-            </div>
+            </div> -->
         </section>
 
         <!-- Proyectos -->
@@ -123,20 +123,30 @@
         <!-- Contacto -->
         <section class="contacto" id="contacto">
             <form action="https://formsubmit.co/240188fc8ba235d7767b61b54f4de2ec" method="post">
-                <label for="name">Nombre:*</label>
-                <input type="text" name="name" id="name" placeholder="Ej: Miler Vargas" required>
-                <label for="email">Email:*</label>
-                <input type="email" name="email" id="email" placeholder="Ej: miller@ejemplo.com" required>
-                <label for="subject">Asunto:*</label>
-                <input type="text" name="subject" id="subject" placeholder="Ej: Prueba" required>
-                <label for="comments">Mensaje:*</label>
-                <textarea name="comments" id="comments" placeholder="Ej: Hola que tal" required cols="30"
-                    rows="10"></textarea>
+                <div class="input-container">
+                    <input class=".input" type="text" name="name" id="name" placeholder="Nombre" pattern="([a-zA-Z ]){2,90}" data-tipo="nombre" required>
+                    <label for="name" class="label">Nombre:</label>
+                    <span class="input-container-error"></span>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="email" id="email" placeholder="Email" data-tipo="email" required>
+                    <label for="email" class="label" >Email:</label>
+                    <span class="input-container-error"></span>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="subject" id="subject" placeholder="Asunto" data-tipo="asunto" required>
+                    <label for="subject" class="label">Asunto:</label>
+                    <span class="input-container-error"></span>
+                </div>
+                <div class="input-container">
+                    <textarea name="comments" id="comments" placeholder="Mensaje" required cols="30"
+                    rows="10" data-tipo="mensaje"></textarea>
+                    <label for="comments" class="label">Mensaje:</label>
+                </div>
                 <input type="submit" value="Enviar" id="button">
             </form>
         </section>
-
     </main>
+    <script src="src/js/script.js" type="module"></script>
 </body>
-
 </html>

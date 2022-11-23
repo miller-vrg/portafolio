@@ -36,9 +36,10 @@ body {
 
 header {
     width: 100%;
-    height: 100px;
+    height: 40px;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
 }
 
 nav {
@@ -76,7 +77,6 @@ main {
 }
 
 .home {
-    white: 90%;
     padding: 5%;
     display: grid;
     place-items: center;
@@ -147,20 +147,23 @@ main {
     height: 70%;
 }
 
+.tecnologias {
+    height: 100vh;
+}
 
 .tecnologias,
 .proyectos {
     width: 90%;
-    height: 100vh;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    margin: 10% auto 5%;
+    align-items: center;
+    margin: 10% auto;
 }
 
 .tecnologias .content-tecnologia {
     width: 35%;
-    height: 20%;
+    height: 25%;
     background-color: var(--color-font);
     color: var(---color-font-secun);
     text-align: center;
@@ -196,9 +199,10 @@ main {
 
 .proyectos .content-project {
     width: 80%;
-    height: 23%;
+    height: 30%;
     border: 2px solid var(--color-font);
     text-decoration: none;
+    margin: 25px auto;
     color: var(--color-font)
 }
 
@@ -235,37 +239,43 @@ main {
     margin-bottom: calc(100% - 90%);
 }
 
+
 .contacto form {
-    padding: 3%;
+    padding: 5%;
+    padding-top: 8%;
     width: 80%;
-    height: 80%;
+    height: 90%;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     color: var(---color-font-secun);
+    font-size: 1rem;
     font-weight: bold;
     background-color: var(--color-font);
 }
 
-.contacto form input {
+
+input {
     width: 100%;
-    height: 70px;
-    font-size: 1.5rem;
+    height: 40px;
+    padding-left: 2px;
+    font-size: 1rem;
+    border: none;
 }
 
 .contacto form input,
 .contacto form #mensaje {
-    border: none;
-    border-bottom: 2px solid var(--color-background);
+    border-bottom: 1px solid var(--color-background);
 }
 
-.contacto form #mensaje {
+#mensaje {
     font-size: 1.5rem;
     height: 200px;
 }
 
-.contacto form #button {
+#button {
+    height: 50px;
     font-weight: bold;
     border: none;
     border-radius: 20px;
@@ -274,21 +284,71 @@ main {
     transition: 0.25s;
 }
 
-.contacto form #button:hover {
+#button:hover {
     transform: scale(1.025);
     border: 2px solid var(--color-font);
     box-shadow: 0 0 30px 5px var(--color-shadow);
     opacity: 1;
 }
 
-@media only screen and (min-device-width:600px) and (max-device-width:999px) {
+.contacto form .input-error,
+.input-error::placeholder {
+    color: red;
+    border-bottom:1px solid red;
+    opacity: 1;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.contacto form .label {
+    visibility: hidden;
+    position: absolute;
+    top: calc(5%);
+    left: 5px;
+    transition: all 0.25s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input:focus::placeholder {
+    color: white;
+}
+
+input:focus+.label,
+textarea:focus+.label {
+    visibility: visible;
+    font-size: 1rem;
+    top: -17px;
+    transition: all 0.25s;
+}
+
+@media only screen and (min-width:600px) {
 
     nav .items {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
     .home .description-perfil .redes {
         width: 25%;
+    }
+
+    .tecnologias {
+        height: 150vh;
     }
 
     .tecnologias,
@@ -296,14 +356,18 @@ main {
         padding: 5% auto;
         margin: 0 auto 5%;
         font-size: 1.5rem;
-        height: 150vh;
-        box-sizing: border-box;
     }
 
-    .proyectos .content-project {
-        width: 80%;
-        height: 20%;
+    .content-tecnologia {
+        min-height: 250px;
+        margin-bottom: 20px;
     }
+
+    .content-project {
+        width: 80%;
+        height: 30%;
+    }
+
     .contacto form label,
     .contacto form input,
     .contacto form #mensaje {
@@ -316,7 +380,7 @@ main {
 
 }
 
-@media only screen and (min-device-width:1000px) {
+@media only screen and (min-width:1000px) {
 
     header {
         height: 30px;
@@ -362,9 +426,9 @@ main {
 
     .tecnologias,
     .proyectos {
-        height: 50vh;
         gap: 20px;
-        margin: 2% auto 20%;
+        margin: 20% auto;
+        height: 100vh;
     }
 
     .tecnologias .content-tecnologia {
@@ -411,4 +475,5 @@ main {
     .contacto form #button {
         height: 80px;
     }
+
 }
