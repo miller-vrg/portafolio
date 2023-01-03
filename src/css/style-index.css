@@ -40,6 +40,7 @@ header {
     position: fixed;
     background-color: rgba(0 0 0 /.9);
     z-index: 3;
+    font-size: 2rem;
 }
 
 nav {
@@ -162,8 +163,8 @@ main {
 }
 
 .tecnologias .content-tecnologia {
-    width: 35%;
-    height: 25%;
+    width: 370px;
+    height: 500px;
     background-color: var(--color-font);
     color: var(---color-font-secun);
     text-align: center;
@@ -177,10 +178,6 @@ main {
 .content-tecnologia img {
     object-fit: cover;
     width: 70%;
-}
-
-.content-tecnologia h2 {
-    font-size: 2rem;
 }
 
 .proyectos .content-project,
@@ -294,7 +291,7 @@ input {
 .contacto form .input-error,
 .input-error::placeholder {
     color: red;
-    border-bottom:1px solid red;
+    border-bottom: 1px solid red;
     opacity: 1;
 }
 
@@ -358,9 +355,9 @@ textarea:focus+.label {
         font-size: 1.5rem;
     }
 
-    .content-tecnologia {
-        min-height: 250px;
-        margin-bottom: 20px;
+    .tecnologias .content-tecnologia {
+        width: 270px;
+        height: 400px;
     }
 
     .content-project {
@@ -432,22 +429,18 @@ textarea:focus+.label {
     }
 
     .tecnologias .content-tecnologia {
-        width: 20%;
-        max-height: 300px;
-    }
-
-    .content-tecnologia h2 {
-        font-size: 1rem;
+        width: 270px;
+        height: 320px;
     }
 
     .tecnologias .content-tecnologia,
     .proyectos .content-project {
         font-size: 1rem;
-        height: 90%;
     }
 
     .proyectos .content-project {
         width: 40%;
+        height: 40%;
         max-width: 400px;
         max-height: 300px;
     }
